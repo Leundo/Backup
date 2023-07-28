@@ -9,8 +9,14 @@
 /* Begin PBXBuildFile section */
 		71830E7A2A73E165005D5565 /* Backup.docc in Sources */ = {isa = PBXBuildFile; fileRef = 71830E792A73E165005D5565 /* Backup.docc */; };
 		71830E802A73E166005D5565 /* Backup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71830E752A73E165005D5565 /* Backup.framework */; };
-		71830E852A73E166005D5565 /* BackupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71830E842A73E166005D5565 /* BackupTests.swift */; };
 		71830E862A73E166005D5565 /* Backup.h in Headers */ = {isa = PBXBuildFile; fileRef = 71830E782A73E165005D5565 /* Backup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71830E9C2A73E282005D5565 /* FileManager+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71830E9B2A73E282005D5565 /* FileManager+.swift */; };
+		71830E9F2A73E2CB005D5565 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 71830E9E2A73E2CB005D5565 /* Zip */; };
+		71830EB32A73E3B4005D5565 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71830EB22A73E3B4005D5565 /* Ticket.swift */; };
+		71830EB52A73E5DC005D5565 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71830EB42A73E5DC005D5565 /* Passenger.swift */; };
+		71830EC02A73EE61005D5565 /* RaftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71830EBF2A73EE61005D5565 /* RaftTests.swift */; };
+		71830EC22A73FF10005D5565 /* Raft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71830EC12A73FF10005D5565 /* Raft.swift */; };
+		71830EC62A74066A005D5565 /* Luggage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71830EC52A74066A005D5565 /* Luggage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +34,12 @@
 		71830E782A73E165005D5565 /* Backup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Backup.h; sourceTree = "<group>"; };
 		71830E792A73E165005D5565 /* Backup.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Backup.docc; sourceTree = "<group>"; };
 		71830E7F2A73E166005D5565 /* BackupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		71830E842A73E166005D5565 /* BackupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupTests.swift; sourceTree = "<group>"; };
+		71830E9B2A73E282005D5565 /* FileManager+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+.swift"; sourceTree = "<group>"; };
+		71830EB22A73E3B4005D5565 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		71830EB42A73E5DC005D5565 /* Passenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
+		71830EBF2A73EE61005D5565 /* RaftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaftTests.swift; sourceTree = "<group>"; };
+		71830EC12A73FF10005D5565 /* Raft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raft.swift; sourceTree = "<group>"; };
+		71830EC52A74066A005D5565 /* Luggage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Luggage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71830E9F2A73E2CB005D5565 /* Zip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +83,8 @@
 		71830E772A73E165005D5565 /* Backup */ = {
 			isa = PBXGroup;
 			children = (
+				71830E902A73E240005D5565 /* Helpers */,
+				71830E8F2A73E1D9005D5565 /* Core */,
 				71830E782A73E165005D5565 /* Backup.h */,
 				71830E792A73E165005D5565 /* Backup.docc */,
 			);
@@ -80,9 +94,28 @@
 		71830E832A73E166005D5565 /* BackupTests */ = {
 			isa = PBXGroup;
 			children = (
-				71830E842A73E166005D5565 /* BackupTests.swift */,
+				71830EBF2A73EE61005D5565 /* RaftTests.swift */,
 			);
 			path = BackupTests;
+			sourceTree = "<group>";
+		};
+		71830E8F2A73E1D9005D5565 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				71830EB22A73E3B4005D5565 /* Ticket.swift */,
+				71830EC12A73FF10005D5565 /* Raft.swift */,
+				71830EB42A73E5DC005D5565 /* Passenger.swift */,
+				71830EC52A74066A005D5565 /* Luggage.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		71830E902A73E240005D5565 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				71830E9B2A73E282005D5565 /* FileManager+.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +146,9 @@
 			dependencies = (
 			);
 			name = Backup;
+			packageProductDependencies = (
+				71830E9E2A73E2CB005D5565 /* Zip */,
+			);
 			productName = Backup;
 			productReference = 71830E752A73E165005D5565 /* Backup.framework */;
 			productType = "com.apple.product-type.framework";
@@ -162,6 +198,9 @@
 				Base,
 			);
 			mainGroup = 71830E6B2A73E165005D5565;
+			packageReferences = (
+				71830E9D2A73E2CB005D5565 /* XCRemoteSwiftPackageReference "Zip" */,
+			);
 			productRefGroup = 71830E762A73E165005D5565 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,6 +234,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				71830E7A2A73E165005D5565 /* Backup.docc in Sources */,
+				71830EC22A73FF10005D5565 /* Raft.swift in Sources */,
+				71830EB32A73E3B4005D5565 /* Ticket.swift in Sources */,
+				71830EB52A73E5DC005D5565 /* Passenger.swift in Sources */,
+				71830E9C2A73E282005D5565 /* FileManager+.swift in Sources */,
+				71830EC62A74066A005D5565 /* Luggage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71830E852A73E166005D5565 /* BackupTests.swift in Sources */,
+				71830EC02A73EE61005D5565 /* RaftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -325,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -351,6 +395,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -382,6 +427,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -402,6 +448,7 @@
 		71830E8D2A73E166005D5565 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 923Q86W73B;
@@ -418,6 +465,7 @@
 		71830E8E2A73E166005D5565 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 923Q86W73B;
@@ -462,6 +510,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		71830E9D2A73E2CB005D5565 /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		71830E9E2A73E2CB005D5565 /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71830E9D2A73E2CB005D5565 /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71830E6C2A73E165005D5565 /* Project object */;
 }
